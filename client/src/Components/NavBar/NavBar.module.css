@@ -1,0 +1,46 @@
+.NavBarContainer{
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;    
+    margin-bottom: 2em;
+    border-bottom: solid 6px white;
+
+}
+
+.NavBarContainer select{
+    height: 21.33px;
+    width: 9em;
+}
+
+.NavBarContainer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 2.24rem;
+    padding: 0px 15px 10px;
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: rgb(22.75%, 66.67%, 100%);
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 1;
+}
+
+.NavBarContainer a:hover{
+    background-color: rgb(22.75%, 66.67%, 100%, 0.5);
+}
+
+@media (max-width: 1023px){
+    .NavBarContainer{
+        flex-direction: column;
+    }
+    .NavBarContainer select{
+        width: 12.5em;
+    }    
+    .NavBarContainer div input{
+        width: 8.3em;
+    }
+}

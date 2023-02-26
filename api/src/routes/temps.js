@@ -1,6 +1,6 @@
 const express = require("express");
 const { API_KEY } = process.env
-const { Temperaments } = require('../db')
+const { Temper } = require('../db')
 const axios = require('axios')
 
 const temps = express();
@@ -25,14 +25,14 @@ temps.get('/', async (req, res) => {
         console.log(tempsWithoutSpace)
         await tempsWithoutSpace.forEach(el => {
             if (el != '') {
-                Temperaments.findOrCreate({
+                Temper.findOrCreate({
                     where: {
                         name: el
                     },
                 });
             }
         });
-        const allTemps = await Temperaments.findAll();
+        const allTemps = await Temper.findAll();
         res.status(200).send(allTemps);
 
     } catch (error) {

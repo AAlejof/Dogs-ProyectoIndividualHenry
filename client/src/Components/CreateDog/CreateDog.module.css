@@ -1,0 +1,173 @@
+.CreateDogContainer{
+    min-height: 100vh;
+    display: flex;
+    padding: 0 5em;
+}
+
+.CreateDogImg{
+    width: 100%;
+    align-self: center;
+}
+
+.CreateDogImg img{
+    width: 100%;
+}
+
+.CreateDogForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end
+}
+
+.CreateDogForm span{
+    height: 80%;
+    width: 8px;
+    background: white;
+    align-self: center;
+}
+
+.CreateDogForm form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 380px;
+    font-size: 1.24em;
+    padding: 1em;
+    align-self: center;
+    border: solid;
+    border-radius: 0.5rem;
+}
+
+.CreateDogForm form label{
+    padding: 0.4rem 0;
+}
+
+.CreateDogForm form input{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: solid ;
+}
+
+.CreateDogForm form select{
+    padding: 10px;
+    font-size: 1rem;
+    border: solid 1px;
+    margin-bottom: 1em;    
+    border-radius: 0.5rem;
+}
+
+.CreateDogForm form ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 170px));
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    row-gap: 5px;
+    column-gap: 15px;
+}
+
+.CreateDogForm form li{
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px;
+    padding: 0 0 0 10px;
+    border-radius: 15px;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.CreateDogForm form li button{
+    cursor:pointer;
+    background: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+.SmallInputContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.SmallInputContainer input{
+    width: 100px;
+}
+
+.SmallInputContainer .CollumnInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.FormBtns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.CreateDogForm form .FormBtns a{
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 15px;
+    background: transparent;
+    border: solid 2px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.CreateDogForm form .FormBtns button{
+    width: 100px;
+    border-radius: 15px;
+    background: transparent;
+    border: solid 2px;
+    cursor: pointer;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px;
+}
+.CreateDogForm form input{
+    margin-bottom: 0;
+}
+
+.Error{
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-family: arial;
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    .CreateDogContainer{
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .CreateDogImg{
+        width: 300px;
+    }
+    .CreateDogContainer img{
+        width: 100%;
+    }
+
+    .CreateDogForm{       
+        align-items: center;
+     }
+    .CreateDogForm form{
+       border-radius: 0%;
+       background-color: transparent;
+       border: unset;
+       border-top: solid 15px white;
+       width: 100%;
+       box-shadow: none;
+    }
+}

@@ -1,0 +1,12 @@
+.HomeContainer{
+    min-height: 100vh;    
+
+}
+
+.AllDogsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+    gap: 2em;
+    justify-content: center;
+    padding: 0 1em;
+}

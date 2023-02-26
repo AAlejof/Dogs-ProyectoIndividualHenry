@@ -7,11 +7,11 @@ const dogs = express();
 
 dogs.get('/', async (req, res) => {
     try {
-        const { name } = req.query;
+        const { name } = req.query
         const allDogs = await getAllDogs();
         if (name) {
-            const dogName = await allDogs.filter(dog => dog.name.toLowerCase().includes(name.toLowerCase()));
-            dogName.lenght ?
+            const dogName = await allDogs.filter(dog => dog.name.toLowerCase().includes(name.toLowerCase()))
+            dogName.length ?
                 res.status(200).send(dogName) :
                 res.status(404).send('Error: Dog not found');
         }
@@ -31,7 +31,7 @@ dogs.get('/:id', async(req, res) => {
         if (id){
             const dogBreed = await allDogs.filter(dog => dog.id == id);
             
-            dogBreed.lenght ? 
+            dogBreed.length ? 
             res.status(200).send(dogBreed) :
             res.status(404).send('Error: Dog not found');
         }
@@ -40,7 +40,7 @@ dogs.get('/:id', async(req, res) => {
     }
 });
 
-dogs.post('/',async (req, res) =>{
+dogs.post('/', async(req, res) =>{
     try {
         const {
             name,
@@ -53,8 +53,8 @@ dogs.post('/',async (req, res) =>{
             image,
             createdInDb,
             temperaments
-        } = req.body        
-        
+        } = req.body  
+
         const newDog = await Dog.create({
             name,
             weightMin,
@@ -65,15 +65,17 @@ dogs.post('/',async (req, res) =>{
             origin,
             image,
             createdInDb,
-        })        
+        })   
+        
         temperaments.forEach(async (e)=>{
-            const [temperDB, created] = await Temperaments.findOrCreate({
+            const [temperDB, created] = await temper.findOrCreate({
                 where: {
                     name: e
                 }
             });
             await newDog.addTemper(temperDB);
         })
+
 
         res.status(201).send({ ...newDog.dataValues, temper: temperaments })
     } catch (error) {

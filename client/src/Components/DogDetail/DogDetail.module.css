@@ -1,0 +1,59 @@
+.DogDetailContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2em;
+    color: black;
+    
+}
+
+.h1Detail{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.DogDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: solid 2px black;
+    border-radius: 6px;
+    padding: 0 0 2em;
+    backdrop-filter: blur(10px);
+}
+
+.DogDetail div h2{
+    font-size: 1.24em;
+}
+
+.DogDetail img{
+    width: 90%;
+    max-width:600px;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: solid 0.2rem black;
+}
+
+.HomeAndCreateLinks{
+    display: flex;
+    width: 300px;
+    cursor: pointer;
+    justify-content: space-around;
+    font-size: 1.24em;
+}
+
+.HomeAndCreateLinks a{
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 6px;
+    background: transparent;
+    border: solid 2px black;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}

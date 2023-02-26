@@ -29,14 +29,14 @@ const getDbInfo = async () => {
         return [];
     }
     const dogs = data.map(dbDog => {
-        const dog = { ...dbDog, temperament: dbDog.temperament.map(t => t.name) }
-        delete dog.temperament;
+        const dog = { ...dbDog, temper: dbDog.tempers.map(t => t.name) }
+        delete dog.tempers;
         return dog;
     })
     return dogs;
 }
 
-const getAllDogs = async() =>{
+const getAllDogs = async () => {
     const apiInfo = await getApiInfo();
     const dbInfo = await getDbInfo();
     const allInfo = apiInfo.concat(dbInfo);
