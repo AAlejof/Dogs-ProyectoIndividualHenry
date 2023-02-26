@@ -68,7 +68,7 @@ dogs.post('/', async(req, res) =>{
         })   
         
         temperaments.forEach(async (e)=>{
-            const [temperDB, created] = await temper.findOrCreate({
+            const [temperDB, created] = await Temperaments.findOrCreate({
                 where: {
                     name: e
                 }
