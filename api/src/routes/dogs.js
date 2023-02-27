@@ -1,7 +1,6 @@
-const express = require('express');
-const { Dog, Temperaments } = require('../db');
-const { getAllDogs } = require('../controllers/getDogsData');
-
+const express = require("express");
+const { Dog, Temper } = require("../db");
+const { getAllDogs } = require("../controllers/getDogsData");
 
 const dogs = express();
 
@@ -13,7 +12,7 @@ dogs.get('/', async (req, res) => {
             const dogName = await allDogs.filter(dog => dog.name.toLowerCase().includes(name.toLowerCase()))
             dogName.length ?
                 res.status(200).send(dogName) :
-                res.status(404).send('Error: Dog not found');
+                res.status(404).send('Dog not found');
         }
         else {
             res.status(200).send(allDogs)
@@ -21,26 +20,24 @@ dogs.get('/', async (req, res) => {
     } catch (error) {
         res.status(500).send({ error: error.message })
     }
-});
+})
 
-dogs.get('/:id', async(req, res) => {
+dogs.get('/:id', async (req, res) => {
     try {
-        const { id } = req.params;
+        const { id } = req.params
         const allDogs = await getAllDogs();
-
-        if (id){
-            const dogBreed = await allDogs.filter(dog => dog.id == id);
-            
-            dogBreed.length ? 
-            res.status(200).send(dogBreed) :
-            res.status(404).send('Error: Dog not found');
+        if (id) {
+            const dogBreed = await allDogs.filter(dog => dog.id == id)
+            dogBreed.length ?
+                res.status(200).send(dogBreed) :
+                res.status(404).send('Dog not found');
         }
     } catch (error) {
         res.status(500).send({ error: error.message })
     }
-});
+})
 
-dogs.post('/', async(req, res) =>{
+dogs.post('/', async (req, res) => {
     try {
         const {
             name,
@@ -53,7 +50,7 @@ dogs.post('/', async(req, res) =>{
             image,
             createdInDb,
             temperaments
-        } = req.body  
+        } = req.body
 
         const newDog = await Dog.create({
             name,
@@ -65,10 +62,9 @@ dogs.post('/', async(req, res) =>{
             origin,
             image,
             createdInDb,
-        })   
-        
-        temperaments.forEach(async (e)=>{
-            const [temperDB, created] = await Temperaments.findOrCreate({
+        })
+        temperaments.forEach(async (e) => {
+            const [temperDB, created] = await Temper.findOrCreate({
                 where: {
                     name: e
                 }
@@ -76,11 +72,10 @@ dogs.post('/', async(req, res) =>{
             await newDog.addTemper(temperDB);
         })
 
-
         res.status(201).send({ ...newDog.dataValues, temper: temperaments })
     } catch (error) {
         res.status(500).send({ error: error.message })
-    }    
+    }
 })
 
 
