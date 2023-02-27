@@ -4,19 +4,22 @@ import Home from './Components/Home/Home';
 import DogDetail from './Components/DogDetail/DogDetail';
 import CreateDog from './Components/CreateDog/CreateDog';
 import NotFound from './Components/NotFound/NotFound';
-import { Switch, Route } from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import axios from 'axios';
 axios.defaults.baseURL = 'http://localhost:3001/';
 
 
 
 function App() {
+  const location = useLocation()
   return (
       <div className="App">
+        {location.pathname === "/" ? <Loggin /> : <NavBar/>}
         <Switch>
 
           <Route exact path='/'>
-            <Loggin />
+            
           </Route>
 
           <Route exact path='/home'>

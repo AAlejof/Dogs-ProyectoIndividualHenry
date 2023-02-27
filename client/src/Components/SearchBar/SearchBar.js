@@ -7,7 +7,6 @@ import { getDogs,
     sortByWeight,
     getTemperaments } from "../../redux/actions"
 import style from './SearchBar.module.css'
-import { Link } from "react-router-dom";
 
 const SearchBar = ({setCurrentPage, setOrden}) =>{    
     const dispatch = useDispatch();
@@ -108,12 +107,6 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
                     <option value="desc">Highest</option>
                 </select>
             </div>   
-
-            <div>
-                <Link to='/create'>
-                        <span>Create</span>
-                </Link>
-            </div>
         </div>
     )
 }

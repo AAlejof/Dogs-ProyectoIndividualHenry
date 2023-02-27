@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getDogDetail } from '../../redux/actions';
 import Loading from '../Loading/Loading'
-import { Link } from 'react-router-dom';
 
 const DogDetail = (props) =>{
     const dispatch = useDispatch()
@@ -40,10 +39,6 @@ const DogDetail = (props) =>{
                         <div>
                             <p>Origin: {dog.origin}</p>
                         </div>
-                    </div>
-                    <div className={style.HomeAndCreateLinks}>
-                        <Link to='/home'>Home</Link>
-                        <Link to='/create'>Create</Link>
                     </div>
                 </div>               
             </div>
