@@ -2,9 +2,10 @@
 .Navbar {
     display: flex;
     justify-content:center;
-    margin-top: 2rem;
-    width: max-content;
- 
+    padding-top: 1rem;
+    width: 100vw;
+    background-image: linear-gradient(rgb(248, 221, 183), white);
+    
 }
 
 .nameLogo{
