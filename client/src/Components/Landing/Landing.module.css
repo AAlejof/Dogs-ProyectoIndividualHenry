@@ -1,0 +1,124 @@
+.landingContainer {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-areas: ". img txt .";
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(at 20% 30%, rgb(248, 221, 183), white);
+}
+
+.landingContainer img {
+    width: 100%;
+}
+
+.landingImg {
+    grid-area: img;
+    align-self: center;
+    border: solid #e89d6f;
+    box-shadow: 1rem 1rem 1rem rgb(248, 221, 183);
+}
+
+.landingDescription {
+    grid-area: txt;
+    align-self: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingDescription img {
+    max-width: 20rem;
+}
+
+.landingDescription h2 {
+    font-size: 3rem;
+    padding: 0 1em;
+}
+
+.landingDescription a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.landingButton {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-color: #e89d6f;
+    background: radial-gradient(rgb(248, 221, 183), white);
+    -webkit-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -o-transition: background-color 2s;
+    transition: background-color 2s;
+}
+
+.landingButton:hover {
+    background: rgb(248, 221, 183);
+}
+
+.landingDescription h4 {
+    padding: 0 1em;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+/* ----------MOBILE VERSION-------- */
+
+@media (max-width: 780px) {
+    .landingContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landingDescription img {
+    max-width: 10rem;
+    margin-top: 2rem;
+}
+    .landingDescription {
+        width: 80%;
+    }
+
+    .landingDescription h2 {
+        font-size: 2rem;
+        padding: 0;
+        
+    }
+
+    .landingButton {
+        padding: 0.5rem;
+        border-radius: 1rem;
+        border-color: #e89d6f;
+        margin-bottom: 5rem;
+        background: radial-gradient(rgb(248, 221, 183), white);
+        -webkit-transition: background-color 1.5s;
+        -moz-transition: background-color 1.5s;
+        -o-transition: background-color 1.5s;
+        transition: background-color 1.5s;
+    }
+
+    .landingButton:hover {
+        background: rgb(248, 221, 183);
+    }
+
+    .landingDescription h4 {
+        bottom: 2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: auto;
+        padding-top: 90vw;
+               
+    }
+
+    .landingImg {
+        grid-area: unset;
+        position: absolute;
+        top: 70vw;
+        margin: auto;
+        width: 300px;
+        place-self: center;
+        z-index: 1;
+    }
+}
