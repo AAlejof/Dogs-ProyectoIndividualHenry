@@ -4,7 +4,7 @@
     grid-template-areas: ". img txt .";
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(at 20% 30%, rgb(248, 221, 183), white);
+    background: radial-gradient(at 20% 30%, #f8ddb7, white);
 }
 
 .landingContainer img {
@@ -15,7 +15,7 @@
     grid-area: img;
     align-self: center;
     border: solid #e89d6f;
-    box-shadow: 1rem 1rem 1rem rgb(248, 221, 183);
+    box-shadow: 1rem 1rem 1rem #f8ddb7;
 }
 
 .landingDescription {
@@ -47,7 +47,7 @@
     padding: 0.5rem;
     border-radius: 1rem;
     border-color: #e89d6f;
-    background: radial-gradient(rgb(248, 221, 183), white);
+    background: radial-gradient(#f8ddb7, white);
     -webkit-transition: background-color 2s;
     -moz-transition: background-color 2s;
     -o-transition: background-color 2s;
@@ -55,7 +55,7 @@
 }
 
 .landingButton:hover {
-    background: rgb(248, 221, 183);
+    background: #f8ddb7;
 }
 
 .landingDescription h4 {
@@ -92,7 +92,7 @@
         border-radius: 1rem;
         border-color: #e89d6f;
         margin-bottom: 5rem;
-        background: radial-gradient(rgb(248, 221, 183), white);
+        background: radial-gradient(#f8ddb7, white);
         -webkit-transition: background-color 1.5s;
         -moz-transition: background-color 1.5s;
         -o-transition: background-color 1.5s;
@@ -100,7 +100,7 @@
     }
 
     .landingButton:hover {
-        background: rgb(248, 221, 183);
+        background: #f8ddb7;
     }
 
     .landingDescription h4 {

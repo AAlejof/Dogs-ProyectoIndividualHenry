@@ -4,7 +4,7 @@
     justify-content:center;
     padding-top: 1rem;
     width: 100vw;
-    background-image: linear-gradient(rgb(248, 221, 183), white);
+    background-image: linear-gradient(#f8ddb7, white);
     
 }
 
@@ -30,21 +30,13 @@
     list-style:none
 }
 
-/* .NavbarButton{
-    height: 3rem;
-    border-radius : 1rem;
-    border: solid;
-    padding: 0.5rem  1rem;
-    font-size: 1.5rem;
-} */
-
 .navbarButton {
     font-size: 1.5rem;
     padding: 0.5rem;
     margin-right: 5vw;
     border-radius: 1rem;
     border-color: #e89d6f;
-    background: radial-gradient(rgb(248, 221, 183), white);
+    background: radial-gradient(#f8ddb7, white);
     -webkit-transition: background-color 2s;
     -moz-transition: background-color 2s;
     -o-transition: background-color 2s;
@@ -52,7 +44,7 @@
 }
 
 .navbarButton:hover {
-    background: rgb(248, 221, 183);
+    background: #f8ddb7;
     font-weight: 500;
 }
 
