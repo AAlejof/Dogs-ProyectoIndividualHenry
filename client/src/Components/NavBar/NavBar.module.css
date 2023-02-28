@@ -1,5 +1,5 @@
 
-.Navbar {
+.navbar {
     display: flex;
     justify-content:center;
     padding-top: 1rem;
@@ -12,52 +12,78 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5vw;
 }
 
 .Logo {
     width: 30%;
+    
 }
 
 .buttonList{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 3rem;
-    padding: 3rem;
+    margin-right: 5vw;
+    padding: 1rem;
     list-style:none
 }
 
-.NavbarButton{
+/* .NavbarButton{
     height: 3rem;
     border-radius : 1rem;
     border: solid;
     padding: 0.5rem  1rem;
     font-size: 1.5rem;
+} */
 
+.navbarButton {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-right: 5vw;
+    border-radius: 1rem;
+    border-color: #e89d6f;
+    background: radial-gradient(rgb(248, 221, 183), white);
+    -webkit-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -o-transition: background-color 2s;
+    transition: background-color 2s;
+}
+
+.navbarButton:hover {
+    background: rgb(248, 221, 183);
+    font-weight: 500;
 }
 
 /* ------MOBILE---------*/
 
 @media only screen and (max-width: 900px) {
 
-.Navbar {
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
-    width: 90vw;
+    width: 100vw;
  
+}
+
+.nameLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .Logo {
     width: 30vw;
-    margin: 0;
+    margin-top: 5vw;
 }
 .buttonList{
     display: flex;
-    width: 80vw;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     margin-left: 0.5rem;
@@ -66,13 +92,9 @@
     list-style:none
 }
 
-.NavbarButton{
-    height: 3rem;
-    border-radius : 1rem;
-    border: solid;
-    margin: 0.3rem;
-    padding: 0.5rem  0.7rem;
+.navbarButton {
     font-size: 1.2rem;
-
+    padding: 0.5rem;
+    margin:0 2vw 0 2vw;
 }
 }
