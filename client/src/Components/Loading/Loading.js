@@ -1,5 +1,5 @@
 import style from './Loading.module.css';
-import loading from '../Img/paws.gif';
+import loading from '../../assets/Img/paws.gif';
 
 const Loading = () =>{
     return(

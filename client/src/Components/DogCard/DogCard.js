@@ -1,5 +1,5 @@
 import style from './DogCard.module.css'
-import imageSecondary from '../Img/golden_retriever_drawing.png'
+import imageSecondary from '../../assets/Img/golden_retriever_drawing.png';
 import { Link } from 'react-router-dom'
 
 const DogCard = ({ name, temperaments, image, weightMin, weightMax, heightMin, heightMax, id }) => {

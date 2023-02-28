@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NavBar.module.css';
-import image from "../Img/paw_logo.png";
+import image from "../../assets/Img/paw_logo.png";
 import { Link } from "react-router-dom";
 
 
