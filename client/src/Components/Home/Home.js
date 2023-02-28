@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-    getDogs,
-    getTemperaments,
-} from '../../redux/actions';
+import { getDogs, getTemperaments } from '../../redux/actions';
 import DogCard from "../DogCard/DogCard";
 import image from '../Img/golden_retriever_drawing.png'
 import style from './Home.module.css';
