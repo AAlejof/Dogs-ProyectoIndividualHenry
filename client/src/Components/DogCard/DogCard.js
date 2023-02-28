@@ -5,21 +5,23 @@ import { Link } from 'react-router-dom'
 const DogCard = ({ name, temperaments, image, weightMin, weightMax, heightMin, heightMax, id }) => {
     return (
 
-        <div className={style.DogCardContainer}>
-            <h2 className={style.DogName}>{name}</h2>
-            <div className={style.DogCardImg}>
+        <div className={style.dogCardContainer}>
+            <h2 className={style.dogName}>{name}</h2>
+            <div className={style.dogCardImg}>
                 <img src={image ? image : imageSecondary} alt='Dog Profile' />
             </div>
-            <div className={style.DogCardDescription}>
-                <p>{temperaments && typeof temperaments[0] === 'object' ? temperaments?.map(t => (
-                    t.name + ', '
-                )) : temperaments?.join(', ')}</p>
-                <div className={style.DogCardWeight}>
-                    <span className={style.WeightLeft}> Weight: {weightMin}kg - {weightMax}kg</span>
-                    <span className={style.WeightRight}>Height: {heightMin}cm - {heightMax}cm</span>
+            <div className={style.dogCardDescription}>
+                <div className={style.temperaments}>
+                    <p>Temperament: {temperaments && typeof temperaments[0] === 'object' ? temperaments?.map(t => (
+                        t.name + ', '
+                    )) : temperaments?.join(', ')}</p>
+                </div>
+                <div className={style.dogCardWH}>
+                    <span className={style.weight}> Weight: {weightMin}kg - {weightMax}kg</span>
+                    <span className={style.height}>Height: {heightMin}cm - {heightMax}cm</span>
                 </div>
             </div>
-            <Link to={`/dog/${id}`}><h4>More Info</h4></Link>
+            <Link className={style.detailLink} to={`/dog/${id}`}><h4>More Info</h4></Link>
         </div>
 
     )
