@@ -1,5 +1,5 @@
 import './App.css';
-import Loggin from './Components/Loggin/Loggin';
+import Landing from './Components/Landing/Landing';
 import Home from './Components/Home/Home';
 import DogDetail from './Components/DogDetail/DogDetail';
 import CreateDog from './Components/CreateDog/CreateDog';
@@ -15,12 +15,9 @@ function App() {
   const location = useLocation()
   return (
       <div className="App">
-        {location.pathname === "/" ? <Loggin /> : <NavBar/>}
+        {location.pathname === "/" ? <Landing /> : <NavBar/>}
         <Switch>
 
-          <Route exact path='/'>
-            
-          </Route>
 
           <Route exact path='/home'>
             <Home />
