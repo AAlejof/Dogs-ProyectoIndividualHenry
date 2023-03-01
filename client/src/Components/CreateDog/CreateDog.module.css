@@ -1,33 +1,44 @@
-.CreateDogContainer{
-    min-height: 100vh;
-    display: flex;
-    padding: 0 5em;
+.createH2{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
 }
 
-.CreateDogImg{
+.createText{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.createContainer{
+    /* min-height: 100vh; */
+    display: flex;
+    margin-top: 1rem;
+    padding: 0 5em;
+    padding-bottom: 5rem;
+    
+}
+
+.createImg{
     width: 100%;
     align-self: center;
+    border: solid #e89d6f;
+    box-shadow: 1rem 1rem 1rem #f8ddb7;
 }
 
-.CreateDogImg img{
+.createImg img{
     width: 100%;
 }
 
-.CreateDogForm{
+.createForm{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end
+    align-items: flex-end;
 }
 
-.CreateDogForm span{
-    height: 80%;
-    width: 8px;
-    background: white;
-    align-self: center;
-}
-
-.CreateDogForm form{
+.createForm form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,28 +48,36 @@
     align-self: center;
     border: solid;
     border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 #e89d6f, 0 6px 20px 0 #e89d6f;
+    transition: all .5s ease;
 }
 
-.CreateDogForm form label{
+.createForm form:hover{
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: 0 8px 16px 0 #e89d6f, 0 12px 40px 0 #e89d6f;
+    transition: all .4s ease;
+}
+
+.createForm form label{
     padding: 0.4rem 0;
 }
 
-.CreateDogForm form input{
+.createForm form input{
     padding: 10px;
     font-size: 1rem;
     border-radius: 0.5rem;
     border: solid ;
 }
 
-.CreateDogForm form select{
+.createForm form select{
     padding: 10px;
     font-size: 1rem;
-    border: solid 1px;
+    border: solid;
     margin-bottom: 1em;    
     border-radius: 0.5rem;
 }
 
-.CreateDogForm form ul{
+.createForm form ul{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 170px));
     padding: 0;
@@ -68,7 +87,7 @@
     column-gap: 15px;
 }
 
-.CreateDogForm form li{
+.createForm form li{
     display: flex;
     justify-content: space-between;
     border: solid 2px;
@@ -78,12 +97,17 @@
     font-size: 0.9rem;
 }
 
-.CreateDogForm form li button{
+.createForm form li button{
     cursor:pointer;
-    background: white;
     border: none;
     padding: 10px 10px;
     border-radius: 0 10px 10px 0;
+
+}
+
+.createForm form li button{
+    border: solid 2px #e89d6f;
+    background: #f8ddb7;
 }
 
 .SmallInputContainer{
@@ -108,9 +132,10 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 1em;
+    
 }
 
-.CreateDogForm form .FormBtns a{
+.createForm form .FormBtns a{
     color: black;
     text-decoration: none;
     width: 100px;
@@ -123,7 +148,7 @@
     cursor: pointer;
 }
 
-.CreateDogForm form .FormBtns button{
+.createForm form .FormBtns button{
     width: 100px;
     border-radius: 15px;
     background: transparent;
@@ -132,8 +157,21 @@
     height: 100%;
     font-size: 1rem;
     padding: 10px;
+    background: radial-gradient(#f8ddb7, white);
+    -webkit-transition: background-color 2s ease-in-out;
+    -moz-transition: background-color 2s ease-in-out;
+    -o-transition: background-color 2s ease-in-out;
+    transition: background-color 2s ease-in-out;
+    transition: color 2s ease-in-out;
+    transition: border 2s ease-in-out;
 }
-.CreateDogForm form input{
+
+.createForm form .FormBtns button:hover{
+    border: solid 2px #e89d6f;
+    background: #f8ddb7;
+}
+
+.createForm form input{
     margin-bottom: 0;
 }
 
@@ -147,22 +185,22 @@
 }
 
 @media (max-width: 768px){
-    .CreateDogContainer{
+    .createContainer{
         flex-direction: column;
         padding: 2em;
     }
 
-    .CreateDogImg{
+    .createImg{
         width: 300px;
     }
-    .CreateDogContainer img{
+    .createContainer img{
         width: 100%;
     }
 
-    .CreateDogForm{       
+    .createForm{       
         align-items: center;
      }
-    .CreateDogForm form{
+    .createForm form{
        border-radius: 0%;
        background-color: transparent;
        border: unset;
