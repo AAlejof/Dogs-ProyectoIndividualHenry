@@ -3,7 +3,6 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   gap: 2em;
    color: black
 }
 
@@ -11,9 +10,3 @@
     width: 80vw;
 }
 
-
-.NotFoundDescription a{
-    text-decoration: none;
-    color:black;
-    cursor: pointer;
-}
