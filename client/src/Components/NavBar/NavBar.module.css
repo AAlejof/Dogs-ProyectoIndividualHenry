@@ -10,14 +10,19 @@
 
 .nameLogo{
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin-left: 5vw;
+    
 }
 
 .Logo {
     width: 30%;
-    
+}
+
+.siteName{
+    color: black;
+    font-size: 6rem;
+    padding-left: 0.5rem;
 }
 
 .buttonList{
@@ -48,7 +53,7 @@
     font-weight: 500;
 }
 
-/* ------MOBILE---------*/
+/* ------MOBILE VERSION ---------*/
 
 @media only screen and (max-width: 900px) {
 
@@ -58,7 +63,6 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
- 
 }
 
 .nameLogo{
@@ -70,9 +74,16 @@
 }
 
 .Logo {
-    width: 30vw;
-    margin-top: 5vw;
+    width: 41vw;
+    margin-top: 1rem;
 }
+
+.siteName{
+    color: black;
+    font-size: 2rem;
+    padding: 0;
+}
+
 .buttonList{
     display: flex;
     width: 100vw;

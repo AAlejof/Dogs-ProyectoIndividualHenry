@@ -9,10 +9,12 @@ const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <div className={styles.nameLogo}>
-                <img className={styles.Logo} src={image} alt="Woofipedia logo" />
-                <h1>Woofipedia</h1>
-            </div>
+            <Link style={{ textDecoration: 'none' }} to="/home">
+                <div className={styles.nameLogo}>
+                    <img className={styles.Logo} src={image} alt="Woofipedia logo" />
+                    <h1 className={styles.siteName}>Woofipedia</h1>
+                </div>
+            </Link>
             <ul className={styles.buttonList}>
                 <li>
                     <Link to="/home"><button className={styles.navbarButton}>Home</button></Link>
@@ -21,7 +23,7 @@ const Navbar = () => {
                     <Link to="/create"><button className={styles.navbarButton}>Create</button></Link>
                 </li>
                 {/* <li>
-          <Link to="/About"><button className={styles.NavbarButton}>About</button></Link>
+          <Link to="/About"><button className={styles.navbarButton}>About</button></Link>
         </li> */}
                 <li>
                     <Link to='/'><button className={styles.navbarButton}>Logout</button></Link>
