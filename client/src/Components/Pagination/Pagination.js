@@ -7,10 +7,10 @@ const Pagination = ({postPerPage, totalPosts, paginate}) => {
         pageNumbers.push(i);
     }
     return(
-        <nav>
-            <ul className={style.PaginationContainer}>{pageNumbers.map(number =>(
+        <nav className={style.paginationNav}>
+            <ul className={style.paginationContainer}>{pageNumbers.map(number =>(
                 <li key={number}>
-                    <button onClick={() => paginate(number)}>
+                    <button className={style.paginationButton} onClick={() => paginate(number)}>
                         {number}
                     </button>
                 </li>

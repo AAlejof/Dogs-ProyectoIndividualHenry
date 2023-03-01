@@ -1,20 +1,46 @@
-.PaginationContainer{
+/*Hinoki 	#f8ddb7 */
+/*InventiveOrange #e89d6f  */
+/*Pennywise #a2583a */
+
+.paginationNav{
+    height: 100%;
+    margin-top: 5vw; 
+}
+
+.paginationContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20px, 45px));
     justify-items: center;
     justify-content: center;
     list-style-type: none;
-    padding: 1em;
-    row-gap: 1em;
-    margin: 1em 0 0;
+    height: 100%;
+    padding-bottom: 5rem;
+    row-gap: 1rem;
+    margin-bottom: 0;
+    background-image: linear-gradient(white, #f8ddb7 );
 }
 
-.PaginationContainer li button{
-    margin: 0 1em;
+.paginationButton{
+    margin: 0 1rem;
     font-weight: 600;
-    background-color: white;
-    border: solid 1px black;
+    background: radial-gradient(#f8ddb7, white);
+    border: solid 1px #e89d6f;
     border-radius: 10rem;
     width: 2rem;
     cursor: pointer;
+    -webkit-transition: background-color 2s ease-in-out;
+    -moz-transition: background-color 2s ease-in-out;
+    -o-transition: background-color 2s ease-in-out;
+    transition: background-color 2s ease-in-out;
+    transition: color 2s ease-in-out;
+    transition: border 2s ease-in-out;
+}
+
+.paginationButton:hover{
+    border: solid 2px #e89d6f;
+    background: #f8ddb7;
+}
+
+.paginationButtonActive{
+    background: radial-gradient(#a2583a, white);
 }
