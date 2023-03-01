@@ -1,59 +1,99 @@
-.DogDetailContainer{
+.DogDetailContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 2em;
     color: black;
-    
+
 }
 
-.h1Detail{
+.h2Detail {
     margin: 1rem;
     padding: 1rem;
     font-size: 5rem;
+    text-align: center;
 }
 
-.DogDetail{
+.dogDetail {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    border: solid 2px black;
+    margin: 2rem auto;
+    border: solid 2px #e89d6f;
     border-radius: 6px;
-    padding: 0 0 2em;
+    padding: 2rem;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px 0 #e89d6f, 0 6px 20px 0 #e89d6f;
+    transition: all .5s ease;
 }
 
-.DogDetail div h2{
-    font-size: 1.24em;
+.dogDetail:hover {
+    /* transform: translate3D(0,-1px,0) scale(1.03); */
+    box-shadow: 0 8px 16px 0 #e89d6f, 0 12px 40px 0 #e89d6f;
+    transition: all .4s ease;
 }
 
-.DogDetail img{
+.dogDetail div h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.dogDetail div p {
+    max-width: 450px;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.dogDetail img {
     width: 90%;
-    max-width:600px;
+    max-width: 600px;
     margin: 2rem;
     border-radius: 1rem;
-    border: solid 0.2rem black;
+    border: solid 0.2rem #a2583a;
 }
 
-.HomeAndCreateLinks{
-    display: flex;
-    width: 300px;
-    cursor: pointer;
-    justify-content: space-around;
-    font-size: 1.24em;
-}
+/* ------------MOBILE VERSION----------- */
 
-.HomeAndCreateLinks a{
-    color: black;
-    text-decoration: none;
-    width: 100px;
-    border-radius: 6px;
-    background: transparent;
-    border: solid 2px black;
-    text-align: center;
-    padding: 5px 0;
-    font-size: 1rem;
-    cursor: pointer;
+@media (max-width: 900px) {
+
+    .h2Detail {
+        margin: 1rem;
+        padding: 1rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .dogDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 2rem;
+        border: solid 2px #e89d6f;
+        border-radius: 6px;
+        padding: 0 0 1rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .dogDetail div h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .dogDetail div p {
+        max-width: 450px;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .dogDetail img {
+        width: 80%;
+        max-width: 80vw;
+        margin: 2rem;
+        border-radius: 1rem;
+        border: solid 0.2rem #a2583a;
+    }
+
 }
