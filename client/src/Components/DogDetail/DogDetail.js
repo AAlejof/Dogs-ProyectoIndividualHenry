@@ -17,16 +17,16 @@ const DogDetail = (props) =>{
     return(
         
         <div>
+            <h2 className={style.h2Detail}>Dog breed detail</h2>
             {selectedDog.length ?
             <div className={style.DogDetailContainer}>
-                <h1 className={style.h1Detail}>Dog detail</h1>
-                <div className={style.DogDetail}>
+                <div className={style.dogDetail}>
                     <div> 
                         <img src={dog.image} alt='Dog Profile'/>
                     </div>
                     <div>
                         <h2>{dog.name}</h2> 
-                        <p>{dog.createdInDb === true ? dog.temper.map(t => t.name) : dogTempers}</p>
+                        <p>Temperament: {dog.createdInDb === true ? dog.temper.map(t => t.name) : dogTempers}</p>
                         <div>
                             <p>Weight: {dog.weightMin}kg - {dog.weightMax}kg</p>
                         </div>
@@ -37,7 +37,7 @@ const DogDetail = (props) =>{
                             <p>Life Span: {dog.life_span}</p>
                         </div>
                         <div>
-                            <p>Origin: {dog.origin}</p>
+                            <p>Origin: {dog.origin ? dog.origin : 'not registered'}</p>
                         </div>
                     </div>
                 </div>               
