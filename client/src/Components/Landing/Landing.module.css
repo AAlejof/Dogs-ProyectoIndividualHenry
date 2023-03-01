@@ -84,14 +84,13 @@
     .landingDescription h2 {
         font-size: 2rem;
         padding: 0;
-        
     }
 
     .landingButton {
         padding: 0.5rem;
         border-radius: 1rem;
         border-color: #e89d6f;
-        margin-bottom: 5rem;
+        margin-bottom: 4.5rem;
         background: radial-gradient(#f8ddb7, white);
         -webkit-transition: background-color 1.5s;
         -moz-transition: background-color 1.5s;
@@ -107,8 +106,9 @@
         bottom: 2rem;
         font-size: 1.5rem;
         font-weight: 500;
+        text-align: center;
         margin: auto;
-        padding-top: 90vw;
+        padding-top: 95vw;
                
     }
 
