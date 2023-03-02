@@ -1,6 +1,7 @@
 import style from './DogDetail.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { getDogDetail, clearDogDetail } from '../../redux/actions';
 import Loading from '../Loading/Loading'
 
@@ -43,6 +44,7 @@ const DogDetail = (props) =>{
                         </div>
                     </div>
                 </div>               
+                    <div className={style.returnBtnDiv}> <Link to="/home"><button className={style.returnButton}>Return</button></Link></div>
             </div>
             : <Loading/>}
             

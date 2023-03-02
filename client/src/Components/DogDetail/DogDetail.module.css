@@ -52,6 +52,31 @@
     border: solid 0.2rem #a2583a;
 }
 
+.returnBtnDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.returnButton {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-right: 5vw;
+    border-radius: 1rem;
+    border-color: #e89d6f;
+    background: radial-gradient(#f8ddb7, white);
+    -webkit-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -o-transition: background-color 2s;
+    transition: background-color 2s;
+}
+
+.returnButton:hover {
+    background: #f8ddb7;
+    font-weight: 500;
+}
+
+
+
 /* ------------MOBILE VERSION----------- */
 
 @media (max-width: 900px) {
