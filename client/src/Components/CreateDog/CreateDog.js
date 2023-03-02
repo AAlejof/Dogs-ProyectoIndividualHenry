@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import style from './CreateDog.module.css';
 import image from '../../assets/Img/spaniel_pencil_drawing.jpeg';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { getTemperaments, createDog } from '../../redux/actions';
 
 const validate = (input) => {
