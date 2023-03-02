@@ -37,6 +37,8 @@ const Home = () => {
     }, [dispatch])
 
     return (
+        <>
+        
         <div>
             {allDogs.length ?
 
@@ -68,10 +70,10 @@ const Home = () => {
                         paginate={paginate}
                     />
                 </div>
-
                 : <Loading />
             }
         </div>
+        </>
     )
 }
 
