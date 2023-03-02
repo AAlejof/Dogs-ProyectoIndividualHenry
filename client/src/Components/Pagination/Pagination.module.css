@@ -14,10 +14,9 @@
     justify-content: center;
     list-style-type: none;
     height: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     row-gap: 1rem;
     margin-bottom: 0;
-    background-image: linear-gradient(white, #f8ddb7 );
 }
 
 .paginationButton{
