@@ -18,7 +18,12 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
         e.preventDefault();
         setName(e.target.value);
     }    
-
+    const handleKeyDown = (e) => {
+       if (e.key === 'Enter') {
+        handleSubmit(e);
+       }
+    }
+    
     function handleSortByName(e) {
         e.preventDefault();        
         setCurrentPage(1);        
@@ -53,6 +58,7 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
         setCurrentPage(1);
      }
 
+
      useEffect(() =>{
         dispatch(getDogs())
         dispatch(getTemperaments())
@@ -66,6 +72,7 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
                 placeholder="Breed..."
                 onChange={e => handleInputChange(e)}
                 value={name}
+                onKeyDown={handleKeyDown}
                 />
 
                 <button
