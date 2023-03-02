@@ -1,5 +1,6 @@
 .HomeContainer{
-    min-height: 100vh;    
+    min-height: 100vh;
+    background-image: linear-gradient(white, white , white, white, #f8ddb7 );
 
 }
 
