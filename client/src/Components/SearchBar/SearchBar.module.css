@@ -1,4 +1,4 @@
-.NavBarContainer{
+.searchBarContainer{
     display: flex;
     gap: 0.5em;
     justify-content: center;
@@ -9,12 +9,30 @@
 
 }
 
-.NavBarContainer select{
+.searchBarContainer button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin-left: 0.5rem;
+        border-radius: 1rem;
+        border-color: #e89d6f;
+        background: radial-gradient(#f8ddb7, white);
+        -webkit-transition: background-color 2s;
+        -moz-transition: background-color 2s;
+        -o-transition: background-color 2s;
+        transition: background-color 2s;
+}
+
+.searchBarContainer button:hover {
+    background: #f8ddb7;
+    font-weight: 500;
+}
+
+.searchBarContainer select{
     height: 21.33px;
     width: 9em;
 }
 
-.NavBarContainer a{
+.searchBarContainer a{
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem;
@@ -23,7 +41,7 @@
     
 }
 
-.NavBarContainer a:visited{
+.searchBarContainer a:visited{
     color: black;
     text-decoration: none;
     font-size: 1rem;
@@ -33,18 +51,18 @@
     
 }
 
-.NavBarContainer a:hover{
+.searchBarContainer a:hover{
     background-color: lightgray;
 }
 
 @media (max-width: 1023px){
-    .NavBarContainer{
+    .searchBarContainer{
         flex-direction: column;
     }
-    .NavBarContainer select{
+    .searchBarContainer select{
         width: 12.5em;
     }    
-    .NavBarContainer div input{
+    .searchBarContainer div input{
         width: 8.3em;
     }
 }

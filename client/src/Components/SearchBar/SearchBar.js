@@ -65,22 +65,7 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
     },[dispatch])
 
     return(
-        <div className={style.NavBarContainer}>
-            <div>
-                <input 
-                type='search' 
-                placeholder="Breed..."
-                onChange={e => handleInputChange(e)}
-                value={name}
-                onKeyDown={handleKeyDown}
-                />
-
-                <button
-                type="search"
-                onClick={e => handleSubmit(e)}>
-                    Search
-                </button>
-            </div>
+        <div className={style.searchBarContainer}>
             
             <div>
                 <select onChange={e => handleFilterByStored(e)}>
@@ -114,6 +99,21 @@ const SearchBar = ({setCurrentPage, setOrden}) =>{
                     <option value="desc">Highest</option>
                 </select>
             </div>   
+            <div>
+                <input 
+                type='search' 
+                placeholder="Enter breed..."
+                onChange={e => handleInputChange(e)}
+                value={name}
+                onKeyDown={handleKeyDown}
+                />
+
+                <button
+                type="search"
+                onClick={e => handleSubmit(e)}>
+                    Search
+                </button>
+            </div>
         </div>
     )
 }
