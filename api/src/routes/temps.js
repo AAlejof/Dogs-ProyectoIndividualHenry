@@ -21,7 +21,7 @@ temps.get('/', async (req, res) =>{
             }
             return el;
         })
-        console.log(tempsWithoutSpace)
+        //console.log(tempsWithoutSpace)
         await tempsWithoutSpace.forEach(el => {
             if (el != '') {
                 Temper.findOrCreate({
